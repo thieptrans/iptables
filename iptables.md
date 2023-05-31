@@ -1,5 +1,5 @@
-# **Detect iptables**
-## **1. Install and setting virtual machine**
+# **Firewal iptables**
+## **1. Install and setting virtual machines**
 ## Download and install virtual machines 
 >[click here](https://drive.google.com/drive/folders/1kk28EXvbF1JrZGTdLqixROhHEiMK5j8A)
 
