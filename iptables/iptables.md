@@ -102,4 +102,5 @@ IP 192.168.244.149 is ip of firewall (eth1)
 >/etc/init.d/iptables save
 * restart
 > service iptables restart
-* 
+*
+> nano /proc/sys/net/ipv4/ip_forward    0-> 1
