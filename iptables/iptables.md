@@ -78,7 +78,7 @@ Windows server:
 Use *nslookup* to do a reverse DNS look up and find the host name
 > nslookup
 
-## Case3: Allow LAN to access Internet
+## **Case3: Allow LAN to access Internet**
 Enter google.com in internet browser
 Result: You are not connected
 Config on firewall:
@@ -88,5 +88,18 @@ Config on firewall:
 
 Result: You can access google.com
 
-## Case 4: Access to DMZ
+## **Case 4: Access to DMZ**
+Public Website of DMZ to internet 
+>iptables -t nat -A PREROUTING -d 192.168.244.149 -p tcp --dport 80 -j DNAT --to-destination 10.0.0.20
+>
+>iptables -A FORWARD -i eth1 -o eth3 -p tcp --dport 80 -j ACCEPT
+>
+>iptables -A FORWARD -s 10.0.0.0/24 -j ACCEPT
 
+IP 192.168.244.149 is ip of firewall (eth1)
+## *Some rules when using*
+* save rules of iptables
+>/etc/init.d/iptables save
+* restart
+> service iptables restart
+* 
